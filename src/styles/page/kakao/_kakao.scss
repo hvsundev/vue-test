@@ -1,0 +1,706 @@
+$icon-url: url("https://st.kakaocdn.net/commerce_ui/front-friendsshop/real/20220106/192724/ico_friends.png") 0 0 no-repeat;
+
+.kakao-pc {
+  overflow: hidden;
+  background-color: $white;
+
+  .ico_friend {
+    background: $icon-url;
+    background-size: 700px 600px;
+  }
+
+  .cover {
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+
+  // [컴포넌트] category.vue
+  .category-wrap {
+    position: fixed;
+    width: 400px;
+    inset: 0px;
+    z-index: 1000;
+
+    .category {
+      height: 100%;
+      width: 400px;
+      background-color: $white;
+      position: fixed;
+
+      .user-info {
+        display: flex;
+        padding: 32px 24px 24px;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      .banner-wrap {
+        display: block;
+        overflow: hidden;
+        margin: 0 16px;
+        border-radius: 8px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .menu-wrap {
+        padding-top: 16px;
+
+        .menu {
+          padding: 0 24px;
+          font-size: 16px;
+          line-height: 48px;
+          cursor: pointer;
+        }
+
+        .item-line {
+          margin-bottom: 16px;
+          padding-bottom: 16px;
+          border-bottom: 1px solid #eff0f2;
+        }
+      }
+    }
+  }
+
+  .c-accordian-item-wrap {
+    cursor: pointer;
+
+    .header-wrap {
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .header {
+        font-size: 16px;
+        line-height: 48px;
+        cursor: pointer;
+      }
+
+      .slide-btn {
+        width: 16px;
+        height: 15px;
+        background: $icon-url;
+        background-position: -360px 0;
+        background-size: 700px 600px;
+
+        &.active {
+          background-position: -340px 0;
+        }
+      }
+    }
+
+    .sub-menu-wrap {
+
+      .sub-menu {
+        padding: 16px 12px 14px;
+
+        li {
+          width: 20%;
+          display: inline-block;
+          text-align: center;
+          padding: 0 12px 22px;
+
+          span {
+            font-size: 12px;
+            color: #747475;
+            line-height: 25px;
+            padding: 8px 2px 0;
+          }
+
+          img {
+            width: 100%;
+            border-radius: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .container-kakao-pc {
+    max-width: 640px;
+    background-color: $white;
+    margin: 0 auto;
+
+    // 상단 헤더
+    .kakao-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 640px;
+      height: 47px;
+      font-size: 20px;
+
+      button {
+        width: 19px;
+        height: 19px;
+
+        &.hamburger {
+          margin: 8px 3px 7px 20px;
+          background-size: contain;
+          background-image: url("https://t1.kakaocdn.net/friends/sso_header/2x/ic_menu_2x.png");
+        }
+
+        &.search {
+          margin: 8px 20px 7px 3px;
+          background-size: contain;
+          background-image: url("https://t1.kakaocdn.net/friends/sso_header/2x/ic_search_2x.png");
+          background-repeat: no-repeat;
+        }
+      }
+
+      .logo {
+        width: 147px;
+        height: 24px;
+        padding-top: 11px;
+        background-image: url("https://t1.kakaocdn.net/friends/new_store/2.0/mobile/new-logo-mo.png");
+        background-size: cover;
+      }
+    }
+
+    // 상단 메뉴 리스트
+    .kakao-menu {
+      max-width: 640px;
+      font-size: 16px;
+
+      ul {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $gray-light2;
+        padding: 0px 5px;
+
+        li {
+          height: 43px;
+          flex: 1 1 0%;
+          text-align: center;
+          line-height: 43px;
+          cursor: pointer;
+
+          a {
+            display: block;
+          }
+        }
+
+        li.active {
+          font-weight: bold;
+          border-bottom: 4px solid rgb(30, 30, 30);
+          box-sizing: border-box;
+        }
+      }
+    }
+
+    // MyPage.vue
+    .mypage-wrap {
+      .sub-menu {
+        display: flex;
+        width: 100%;
+        background-color: #f9f9fa;
+        box-sizing: border-box;
+        min-height: 44px;
+        padding: 13px 0;
+
+        li {
+          cursor: pointer;
+          color: #909092;
+          flex: 1 auto;
+          font-size: 14px;
+          text-align: center;
+
+          a {
+            display: block;
+          }
+        }
+
+        .router-link-exact-active {
+          font-weight: 700;
+          color: black;
+        }
+      }
+    }
+
+    // NewProd.vue
+    .newprod-wrap {
+
+      .more-btn {
+        display: flex;
+        width: 343px;
+        height: 52px;
+        border-radius: 4px;
+        font-size: 15px;
+        border: 1px solid $gray-light3;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+
+        &::after {
+          display: inline-block;
+          content: '';
+          width: 13px;
+          height: 13px;
+          background-image: url("https://t1.kakaocdn.net/friends/new_store/more-black.png");
+          background-size: contain;
+        }
+      }
+    }
+
+    // Popular.vue
+    .popular-wrap {
+
+      .notice {
+        display: flex;
+        height: 40px;
+        padding: 0 20px;
+        justify-content: flex-end;
+        align-items: center;
+
+        p {
+          font-size: 13px;
+          color: $gray;
+        }
+
+        span {
+          width: 14px;
+          height: 14px;
+          margin-left: 3px;
+          background-image: url("https://t1.kakaocdn.net/friends/new_store/3.0/common/ico-filter-16@3x.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+
+      .box-wrap {
+        max-width: 640px;
+        display: grid;
+        gap: 2px;
+        grid-template-columns: 212px 212px 212px;
+        grid-template-rows: 212px 212px;
+        margin-bottom: 2px;
+      }
+    }
+
+    // [컴포넌트] box.vue
+    .c-box {
+      background-color: $lightsky-light;
+
+      img {
+        width: 100%;
+      }
+
+      &.big {
+        grid-area: 1 / 1 / 3 / 3;
+      }
+    }
+
+    // [컴포넌트] prod.vue
+    // 상품
+    .c-prod-wrap {
+      margin-right: 20px;
+      width: 270px;
+      height: 400px;
+      position: relative;
+
+      &:nth-child(2n) {
+        margin-right: 0px;
+      }
+
+      .img {
+        position: relative;
+        width: 275px;
+        height: 275px;
+        border-radius: 6px;
+
+        img {
+          width: 100%;
+        }
+        kakao-menu
+        .soldout {
+          position: absolute;
+          width: 61px;
+          height: 22px;
+          top: 12px;
+          left: 12px;
+          background: url("https://t1.kakaocdn.net/friends/new_store/tag-soldout.png") center center / contain no-repeat
+        }
+
+        &::after {
+          position: absolute;
+          background: rgba(0, 0, 0, 0.02);
+          content: "";
+          inset: 0;
+          border-radius: 6px;
+        }
+      }
+
+      .info-wrap {
+        font-size: 16px;
+
+        .title {
+          margin: 10px 0px 5px;
+          color: rgb(119, 119, 119);
+          width: 220px;
+        }
+
+        .discount {
+          color: $row-price;
+          font-weight: bold;
+        }
+
+        .price {
+          font-weight: bold;
+          font-size: 16px;
+
+          &.active {
+            text-decoration: line-through;
+            font-weight: normal;
+            color: $gray;
+          }
+        }
+      }
+
+      .basket {
+        position: absolute;
+        background-image: url("https://t1.kakaocdn.net/friends/new_store/3.0/common/Small_30_off.png");
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        top: 288px;
+        right: 0px;
+      }
+
+      // 3개씩 정렬할 때
+      &.three {
+        width: 33.333%;
+        height: 100%;
+        margin: 0px;
+
+        .img {
+          width: 100%;
+          height: 100%;
+        }
+
+        &:nth-child(2n) {
+          margin-right: 0px;
+        }
+
+        .info-wrap {
+          .title {
+            width: 100%;
+            padding-right: 30px;
+          }
+        }
+
+        .basket {
+          top: 208px;
+          right: 9px;
+        }
+      }
+    }
+
+    // [컴포넌트] prodlist.vue
+    .c-prodlist-wrap {
+      max-width: 640px;
+      padding: 49px 35px;
+      border-top: 10px solid $gray-light3;
+
+      .title {
+        letter-spacing: -0.23px;
+
+        .subtitle {
+          font-size: 15px;
+          margin-bottom: 5px;
+          line-height: 20px;
+          color: #9a9a9e;
+        }
+
+        .maintitle {
+          font-size: 28px;
+          line-height: 28px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .prodlist {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      &.three {
+        border-top: 4px solid #f7f7f7;
+        padding: 36px 14px 0px;
+
+        .c-prod-wrap {
+          padding: 0 6px 40px;
+        }
+
+        .maintitle {
+          display: block;
+          padding: 0 20px 16px;
+          font-size: 22px;
+          line-height: 28px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    // [컴포넌트] banner.vue
+    .c-banner-wrap {
+      width: 640px;
+      height: 360px;
+      border-bottom: 1px solid rgb(201, 201, 201);
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      .title-wrap {
+        position: absolute;
+        color: $white;
+        bottom: 25px;
+        left: 35px;
+        line-height: 30px;
+
+        .maintitle {
+          font-size: 24px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+        }
+
+        .subtitle {
+          font-size: 16px;
+
+        }
+      }
+    }
+  }
+
+  .mypage-basket-wrap {
+
+    .progress-info-wrap {
+      margin-top: 26px;
+      padding: 0 20px;
+
+      .price-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        strong {
+          display: block;
+          max-width: 172px;
+          font-size: 15px;
+          line-height: 20px;
+          font-weight: bold;
+
+          span {
+            color: #ff447f;
+          }
+        }
+
+        button {
+          font-size: 14px;
+        }
+      }
+
+      .progress-bar progress {
+        width: 100%;
+      }
+    }
+
+    .basket-list-wrap {
+
+      // 체크박스 공통
+      input[type="checkbox"] {
+        opacity: 0;
+        position: absolute;
+      }
+
+      label {
+        cursor: pointer;
+        display: inline-block;
+        width: 21px;
+        height: 21px;
+
+        .check-btn {
+          background: $icon-url;
+          background-size: 700px 600px;
+          background-position: -160px -220px;
+          display: block;
+          width: 100%;
+          height: 100%;
+
+          &.selected {
+            background-position: -119px -220px;
+          }
+        }
+      }
+
+      .basket-delete-wrap {
+        display: flex;
+        position: relative;
+        padding: 16px 20px;
+        border-bottom: 4px solid #f7f7f7;
+        justify-content: space-between;
+
+        .check-wrap {
+          width: 100px;
+          display: flex;
+        }
+      }
+
+      .basket-prodlist {
+
+        .prod {
+          position: relative;
+          display: flex;
+          margin: 20px 20px 0;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #eff0f2;
+
+          img {
+            width: 80px;
+            height: 80px;
+          }
+
+          .delete-btn {
+            position: absolute;
+            right: 0px;
+            width: 30px;
+            height: 30px;
+
+            span {
+              width: 16px;
+              height: 16px;
+              margin: 0 auto;
+              background-position: -120px 0;
+              display: block;
+            }
+          }
+
+          .prod-info {
+            font-size: 15px;
+            padding: 0 28px 0 12px;
+
+            .title {
+              margin-bottom: 4px;
+            }
+
+            .price {
+              font-weight: bold;
+            }
+
+            .quantity {
+              position: relative;
+              margin-top: 10px;
+              padding: 0 28px;
+              width: 114px;
+
+              input {
+                width: 58px;
+                text-align: center;
+                height: 36px;
+                font-size: 14px;
+                padding: 8px 15px;
+                border: 1px solid #dedfe0;
+                border-radius: 8px;
+                line-height: 20px;
+                background-color: white;
+                box-sizing: border-box;
+                outline: none;
+
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                  -webkit-appearance: none;
+                  margin: 0;
+                }
+              }
+
+              .minus {
+                position: absolute;
+                top: 5px;
+                left: 0;
+                width: 24px;
+                height: 24px;
+                background-position: -620px -220px;
+              }
+
+              .plus {
+                position: absolute;
+                top: 5px;
+                right: 0;
+                width: 24px;
+                height: 24px;
+                background-position: -590px -220px;
+              }
+            }
+          }
+        }
+      }
+
+      .total-info {
+        font-size: 15px;
+        padding: 28px 20px 0;
+        margin-bottom: 31px;
+
+        li {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 8px;
+          line-height: 20px;
+
+          &.total-price {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    &.empty {
+      padding: 30% 0;
+
+      .contents {
+        display: block;
+        text-align: center;
+
+        p {
+          display: block;
+          font-size: 16px;
+          line-height: 24px;
+          color: #aeaeaf;
+          text-align: center;
+        }
+
+        img {
+          width: 192px;
+          height: 192px;
+        }
+
+        button {
+          margin-top: 24px;
+          line-height: 35px;
+          background-color: #3c404b;
+          color: #fff;
+          padding: 0 16px;
+          border: 1px solid #dedfe0;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}

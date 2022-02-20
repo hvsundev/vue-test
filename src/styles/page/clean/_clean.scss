@@ -1,0 +1,100 @@
+$clean-background: #ecedf4;
+$clean-primary: #3285f4;
+
+.clean-layout {
+
+  // 공통 시작
+  * {
+    outline: none;
+  }
+
+  body {
+    line-height: 1.25;
+    font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  }
+
+  // page inner
+  .inner {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ecedf4;
+    overflow: hidden;
+    padding: 0 16px;
+  }
+
+  // scroll
+  ::-webkit-scrollbar {
+    display: none; // Safari and Chrome
+  }
+
+  button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    &.space-between {
+      justify-content: space-between;
+    }
+  }
+
+  .logo {
+    padding-top: 14px;
+    height: 56px;
+  }
+  // == 공통 끝
+
+  .clean-main-wrap {
+
+    .title {
+      font-size: 22px;
+      line-height: 29px;
+      font-weight: bold;
+      letter-spacing: -0.5px;
+      text-align: center;
+      margin: 56px 0 35px;
+    }
+
+    .login-info-wrap {
+      input[type="text"] {
+        width: calc(100% - 32px);
+        border-radius: 4px;
+        border: 1px solid #bebebe;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 12px 16px;
+
+        &::placeholder {
+          color: #bebebe;
+        }
+      }
+
+      input[type="checkbox"] {
+        border-radius: 3px;
+        border: 1px solid #bebebe;
+      }
+
+      .login-btn-wrap {
+        margin: 16px 0 32px;
+      }
+    }
+  }
+
+  .comp-clean-button {
+    button {
+      width: 100%;
+      border-radius: 4px;
+      background-color: $clean-primary;
+      height: 50px;
+    }
+  }
+}

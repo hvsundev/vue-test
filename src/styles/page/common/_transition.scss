@@ -1,0 +1,40 @@
+
+.accordion-slide-enter-active,
+.accordion-slide-leave-active {
+  @include vendorPrefix('transition', height 0.2s ease-in);
+  overflow: hidden;
+}
+
+.accordion-slide-enter,
+.accordion-slide-leave-to {
+  @include vendorPrefix('transition', height 0.2s ease-out);
+}
+
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  @include vendorPrefix('transition', all 0.3s ease-out);
+}
+
+.modal-fade-enter,
+.modal-fade-leave-to {
+  opacity: 0;
+  @include vendorPrefix('transition', all 0.3s ease-in);
+}
+
+.trans-category-enter {
+  opacity: 0;
+  transform: translateX(-30%);
+}
+
+.trans-category-enter-active {
+  transition: all .3s ease-out;
+}
+
+.trans-category-leave-active {
+  transition: all .3s ease-in;
+}
+
+.trans-category-leave-to {
+  opacity: 0;
+  transform: translateX(-30%);
+}
