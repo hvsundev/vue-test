@@ -28,10 +28,6 @@ export default [
         component: () => import("@/views/test/TooltipTest.vue"),
       },
       {
-        path: "toggle",
-        component: () => import("@/views/test/ToggleTest.vue"),
-      },
-      {
         path: "hamburger",
         component: () => import("@/views/test/HamburgerTest.vue"),
       },
@@ -68,10 +64,6 @@ export default [
         component: () => import("@/views/test/Attrs"),
       },
       {
-        path: "checkbox",
-        component: () => import("@/views/test/Checkbox"),
-      },
-      {
         path: "searchable",
         component: () => import("@/views/test/Searchable"),
       },
@@ -98,6 +90,18 @@ export default [
       {
         path: "filter",
         component: () => import("@/views/test/Filter"),
+      },
+      {
+        path: "pdfpreview",
+        component: () => import("@/views/test/PDFPreview"),
+      },
+      {
+        path: "infinitescroll",
+        component: () => import("@/views/test/InfiniteScroll"),
+      },
+      {
+        path: "loading",
+        component: () => import("@/views/test/Loading"),
       },
     ],
   },

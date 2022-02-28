@@ -3,11 +3,14 @@ button, .home-btn {
 }
 
 #common-header {
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
   height: 100px;
+  position: fixed;
+  width: 100%;
 
   .home-btn {
     text-align: center;

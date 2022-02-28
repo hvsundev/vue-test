@@ -34,12 +34,12 @@ export default {
             {
               name: '첨부한 파일명.png',
               size: 10000,
-              href: '/assets/logo.png'
+              href: '/assets/logo-bi.png'
             },
             {
               name: '첨부한 파일명.docx',
               size: 70000,
-              href: '/assets/logo.png'
+              href: '/assets/logo-bi.png'
             }
           ],
           reply: [
@@ -52,7 +52,7 @@ export default {
                 {
                   name: '테스트용 파일.jpg',
                   size: 20000,
-                  href: '/assets/logo.png'
+                  href: '/assets/logo-bi.png'
                 },
               ],
             },
@@ -65,7 +65,7 @@ export default {
                 {
                   name: '첨부한 파일명.jpg',
                   size: 20000,
-                  href: '/assets/logo.png'
+                  href: '/assets/logo-bi.png'
                 },
               ],
             },
@@ -85,12 +85,12 @@ export default {
                 {
                   name: '첨부한 파일명입니당.png',
                   size: 16700,
-                  href: '/assets/logo.png'
+                  href: '/assets/logo-bi.png'
                 },
                 {
                   name: '첨부한 파일명.svg',
                   size: 26800,
-                  href: '/assets/logo.png'
+                  href: '/assets/logo-bi.png'
                 },
               ],
             }

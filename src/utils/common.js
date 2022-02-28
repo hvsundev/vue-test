@@ -23,11 +23,6 @@ export default {
           isCompleted: true,
         },
         {
-          title: "Toggle",
-          router: "/test/toggle",
-          isCompleted: false,
-        },
-        {
           title: "Debounce",
           router: "/test/debounce",
           isCompleted: true,
@@ -73,11 +68,6 @@ export default {
           isCompleted: true,
         },
         {
-          title: "checkbox",
-          router: "/test/checkbox",
-          isCompleted: false,
-        },
-        {
           title: "Searchable Selectbox",
           router: "/test/searchable",
           isCompleted: true,
@@ -115,6 +105,21 @@ export default {
         {
           title: "Filter",
           router: "/test/filter",
+          isCompleted: true,
+        },
+        {
+          title: "PDF preview",
+          router: "/test/pdfpreview",
+          isCompleted: true,
+        },
+        {
+          title: "Inpinite Scroll",
+          router: "/test/infinitescroll",
+          isCompleted: true,
+        },
+        {
+          title: "Loading",
+          router: "/test/loading",
           isCompleted: false,
         },
       ],

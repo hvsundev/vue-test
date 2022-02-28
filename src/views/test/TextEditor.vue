@@ -1,5 +1,5 @@
 <template>
-<div class="inner">
+<div class="inner" style="margin: 0 400px">
   <p class="test-title">Text Editor</p>
   <div class="editor-wrap">
     <div class="header">
@@ -19,7 +19,7 @@
         <div class="playground-file-upload">
           <div class="file-btn-wrap row">
             <label class="upload" for="file-form" >
-<!--              <span>파일첨부</span>--> 🧸💜
+              🧸💜
             </label>
             <input class="upload" multiple="multiple" type="file" id="file-form" @change="handleUpload">
           </div>
@@ -198,7 +198,6 @@ export default {
 
 <style lang="scss">
 .inner {
-  margin: 70px 400px;
   min-width: 700px;
 
   .editor-wrap {
