@@ -5,6 +5,8 @@ import router from "./router";
 import store from "./store";
 import vueDebounce from "vue-debounce";
 
+import './plugins'
+
 import "./filters";
 
 // CSS 가져오기

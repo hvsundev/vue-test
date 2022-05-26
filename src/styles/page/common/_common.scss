@@ -18,3 +18,37 @@ body {
 #nprogress .bar {
   background-color: #CBC0D3;
 }
+
+// toast
+#toast-wrap {
+  position: fixed;
+  bottom: 52px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  background-color: #424442;
+  border-radius: 8px;
+  z-index: 1000;
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+
+  p {
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: -0.5px;
+  }
+
+  div {
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    background-image: url("~@/assets/icon-layer-close.png");
+    background-size: contain;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+  }
+}
+

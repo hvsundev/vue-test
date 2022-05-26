@@ -4,6 +4,7 @@ import TestPath from "./testPath";
 import snack24Path from "./snack24Path";
 import kakaoPath from "@/router/kakaoPath";
 import cleanPath from "@/router/cleanPath";
+import snackSecondPath from "@/router/snackSecondPath";
 
 import Main from "@/views/Index";
 
@@ -22,7 +23,7 @@ const router = new VueRouter({
       path: "/",
       component: Main,
     },
-  ].concat(TestPath, snack24Path, kakaoPath, cleanPath),
+  ].concat(TestPath, snack24Path, kakaoPath, cleanPath, snackSecondPath),
 });
 
 router.beforeEach((to, from, next) => {

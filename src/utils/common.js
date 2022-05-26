@@ -122,6 +122,16 @@ export default {
           router: "/test/loading",
           isCompleted: false,
         },
+        {
+          title: "Toast",
+          router: "/test/toast",
+          isCompleted: true,
+        },
+        {
+          title: "Dashboard",
+          router: "/test/dashboard",
+          isCompleted: true,
+        },
       ],
     };
   },

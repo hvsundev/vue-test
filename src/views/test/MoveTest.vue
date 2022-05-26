@@ -5,8 +5,8 @@
       <div v-for="(item, idx) in lists" :key="item.id">
         <div class="col"
              @drop.prevent="onDrop($event, idx)"
-             @dragenter.prevent
-             @dragover.prevent
+             @dragenter.prevent="onDragEnter($event, idx)"
+             @dragover.prevent="onDragOver($event, idx)"
         >
           <div v-for="(numItem, idx) in item.numberList" :key="idx"
                class="box"
@@ -22,6 +22,8 @@
 </template>
 
 <script>
+import { debounce } from "vue-debounce";
+
 export default {
   name: "MoveTest",
   data() {
@@ -39,17 +41,21 @@ export default {
           id: 3,
           numberList: [ {content: 7}, {content: 8}, {content: 9} ]
         }
-      ]
+      ],
+      selectedCard: null
     };
   },
   methods: {
     startDrag(event, item) {
+      console.log('startDrag');
       event.dataTransfer.dropEffect = "move"
       event.dataTransfer.effectAllowed = "move"
-      event.dataTransfer.setData("selectedItem", item.content)
+      this.selectedCard = item.content
+      console.log(this.selectedCard);
     },
     onDrop(event, colNum) {
-      const selectedItem = Number(event.dataTransfer.getData("selectedItem"))
+      console.log('onDrop');
+      const selectedItem = this.selectedCard
 
       let targetIdx
       let targetItem
@@ -65,15 +71,17 @@ export default {
       this.lists[colNum].numberList.push(targetItem)
       this.lists[targetIdx].numberList.splice(this.lists[targetIdx].numberList.indexOf(targetItem), 1)
     },
-    onDragEnter(event, colNum) {
-      const selectedItem = Number(event.dataTransfer.getData("selectedItem"))
-      console.log(Number(event.dataTransfer.getData("selectedItem")));
+    onDragEnter: debounce(function (event, colNum) {
+      console.log('onDragEnter: ', colNum);
+      const selectedItem = this.selectedCard
+      this.lists[colNum].numberList.push(selectedItem)
       console.log("enter: %d", selectedItem);
-    },
-    onDragOver(event, colNum) {
-      const selectedItem = Number(event.dataTransfer.getData("selectedItem"))
+    }, 100),
+    onDragOver: debounce(function (event) {
+      console.log('onDragOver');
+      const selectedItem = this.selectedCard
       console.log("over: %d", selectedItem);
-    }
+    }, 100),
   },
 };
 </script>
