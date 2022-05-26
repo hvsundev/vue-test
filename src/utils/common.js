@@ -129,8 +129,8 @@ export default {
         },
         {
           title: "Dashboard",
-          router: "/test/dashboard",
-          isCompleted: true,
+          router: "/test/kpidashboard",
+          isCompleted: false,
         },
       ],
     };

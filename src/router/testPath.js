@@ -1,6 +1,5 @@
 import TestLayout from "@/layout/testLayout";
 import TestIndex from "@/views/TestIndex";
-import {isExternalModule} from "eslint-plugin-import/lib/core/importType";
 
 export default [
   {
@@ -109,8 +108,8 @@ export default [
         component: () => import("@/views/test/Toast"),
       },
       {
-        path: "dashboard",
-        component: () => import('@/views/test/Dashboard')
+        path: "kpidashboard",
+        component: () => import("@/views/test/KpiDashboard")
       }
     ],
   },

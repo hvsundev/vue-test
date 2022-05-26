@@ -1,12 +1,12 @@
 <template>
   <section class="dashboard">
-
+    <article></article>
   </section>
 </template>
 
 <script>
 export default {
-  name: "Dashboard"
+  name: "KpiDashboard"
 }
 </script>
 
