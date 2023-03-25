@@ -17,6 +17,10 @@ export default [
       },
       {
         path: "flexgrid",
+        component: () => import("@/views/test/Interaction.vue"),
+      },
+      {
+        path: "flexgrid",
         component: () => import("@/views/test/FlexGridTest.vue"),
       },
       {
@@ -50,10 +54,6 @@ export default [
       {
         path: "fileupload",
         component: () => import("@/views/test/Fileupload"),
-      },
-      {
-        path: "waypoint",
-        component: () => import("@/views/test/Waypoint"),
       },
       {
         path: "highchart",
@@ -110,6 +110,10 @@ export default [
       {
         path: "kpidashboard",
         component: () => import("@/views/test/KpiDashboard")
+      },
+      {
+        path: "draganddrop",
+        component: () => import("@/views/test/DragAndDrop")
       }
     ],
   },
