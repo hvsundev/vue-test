@@ -34,7 +34,18 @@
     }
 
     .interaction-card {
+      &__title {
+        color: #2f2f2f;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.3px;
+        font-family: Pretendard;
+      }
+
       &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 10px;
         background-color: white;
         width: 400px;
@@ -49,14 +60,52 @@
           transform: translateY(-10px);
           transition: all .2s ease-out;
         }
-      }
 
-      &__title {
-        color: #2f2f2f;
-        font-size: 16px;
-        font-weight: 500;
-        letter-spacing: -0.3px;
-        font-family: Pretendard;
+        .loading {
+          position: relative;
+          height: 40px;
+
+          .bar {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 15px;
+            height: 40px;
+            border-radius: 3px;
+            animation: bar 1s infinite linear;
+
+            &:nth-child(1) {
+              left: -25px;
+              background-color: #7a72dd;
+              animation-delay: -0.15s;
+            }
+
+            &:nth-child(2) {
+              left: 0px;
+              background-color: #938bf8;
+              animation-delay: 0s;
+            }
+
+            &:nth-child(3) {
+              left: 25px;
+              animation-delay: 0.15s;
+              background-color: #a69fff;
+            }
+
+            @keyframes bar {
+              0%, 50% {
+                transform: scaleY(1);
+                transition: all .2s;
+              }
+
+              25% {
+                transform: scaleY(1.5);
+              }
+            }
+          }
+        }
       }
     }
   }

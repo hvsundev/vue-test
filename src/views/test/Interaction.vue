@@ -10,14 +10,20 @@
           <ul class="interaction__list">
             <li class="interaction__item">
               <div class="interaction-card">
-                <div class="interaction-card__content"></div>
+                <div class="interaction-card__content">
+                  <div class="loading">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                  </div>
+                </div>
                 <h2 class="interaction-card__title">Loading</h2>
               </div>
             </li>
             <li class="interaction__item">
               <div class="interaction-card">
                 <div class="interaction-card__content"></div>
-                <h2 class="interaction-card__title">Dribble</h2>
+                <h2 class="interaction-card__title">Loading</h2>
               </div>
             </li>
             <li class="interaction__item">
