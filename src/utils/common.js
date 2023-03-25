@@ -3,6 +3,11 @@ export default {
     return {
       testlist: [
         {
+          title: "Interaction",
+          router: "/test/interaction",
+          isCompleted: true,
+        },
+        {
           title: "Flex & Grid",
           router: "/test/flexgrid",
           isCompleted: true,
@@ -51,11 +56,6 @@ export default {
           title: "File Upload",
           router: "/test/fileupload",
           isCompleted: true,
-        },
-        {
-          title: "waypoint",
-          router: "/test/waypoint",
-          isCompleted: false,
         },
         {
           title: "highchart.js",
@@ -130,6 +130,11 @@ export default {
         {
           title: "Dashboard",
           router: "/test/kpidashboard",
+          isCompleted: false,
+        },
+        {
+          title: "Drag And Drop",
+          router: "/test/draganddrop",
           isCompleted: false,
         },
       ],
