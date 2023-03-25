@@ -12,6 +12,8 @@ button, .home-btn {
   position: fixed;
   width: 100%;
 
+  &.is-hidden {}
+
   .home-btn {
     text-align: center;
     padding: 0 20px;

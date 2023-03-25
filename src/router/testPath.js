@@ -16,8 +16,11 @@ export default [
         component: () => import("@/views/test/SlotTest.vue"),
       },
       {
-        path: "flexgrid",
+        path: "interaction",
         component: () => import("@/views/test/Interaction.vue"),
+        meta: {
+          header: false
+        }
       },
       {
         path: "flexgrid",

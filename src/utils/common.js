@@ -5,7 +5,7 @@ export default {
         {
           title: "Interaction",
           router: "/test/interaction",
-          isCompleted: true,
+          isCompleted: false,
         },
         {
           title: "Flex & Grid",

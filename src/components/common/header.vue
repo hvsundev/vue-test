@@ -1,5 +1,5 @@
 <template>
-  <ul id="common-header">
+  <ul v-if="!isHidden" id="common-header" :class="!isHidden && 'is-hidden'">
     <li class="home-btn" @click="moveTo('/')">
       <p><span>🏠</span>Home</p>
     </li>
@@ -20,6 +20,11 @@ import common from "@/utils/common";
 
 export default {
   name: "header",
+  props: {
+    isHidden: {
+      type: Boolean,
+    },
+  },
   mixins: [common],
 };
 </script>

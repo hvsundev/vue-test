@@ -1,6 +1,6 @@
 <template>
-  <div class="test-layout">
-    <TestHeader />
+  <div class="test-layout" :class="!$route.meta.header && 'is-hidden'">
+    <TestHeader :is-hidden="!$route.meta.header" />
     <router-view></router-view>
   </div>
 </template>
@@ -15,5 +15,13 @@ export default {
     Header,
     TestHeader,
   },
+  methods: {
+    init() {
+      // console.log();
+    }
+  },
+  mounted() {
+    this.init()
+  }
 };
 </script>

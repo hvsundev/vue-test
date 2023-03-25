@@ -1,0 +1,63 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+.interaction {
+  &__inner {
+    margin: 0px 200px;
+  }
+
+  &__info {
+    padding: 100px 0;
+    border-bottom: 1px solid #e0dcdc;
+
+    > h4 {
+      font-family: Pretendard;
+      color: #2f2f2f;
+      font-weight: 600;
+      font-size: 22px;
+      padding-bottom: 30px;
+      letter-spacing: -0.3px;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    padding-bottom: 40px;
+
+    &:not(:nth-child(3n)) {
+      padding-right: 20px;
+    }
+
+    .interaction-card {
+      &__content {
+        border-radius: 10px;
+        background-color: white;
+        width: 400px;
+        height: 300px;
+        padding: 10px;
+        margin-bottom: 10px;
+        //box-shadow: 0 1rem 2rem hsl(0 0% 0% / 20%);
+        box-shadow: 0 1rem 2rem -2rem hsl(200 50% 20% / 40%);
+        transition: all .2s ease-in;
+
+        &:hover {
+          transform: translateY(-10px);
+          transition: all .2s ease-out;
+        }
+      }
+
+      &__title {
+        color: #2f2f2f;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.3px;
+        font-family: Pretendard;
+      }
+    }
+  }
+}
