@@ -1,12 +1,10 @@
 <template>
   <div class="inner">
-  <!-- <h1 class="test-title">Interaction</h1> -->
     <main class="interaction">
-      <h2 class="blind">인터렉션 메인 콘텐츠</h2>
-      <section class="interaction__inner">
-        <h3 class="blind">인터렉션 콘텐츠</h3>
-        <article class="interaction__info">
-          <h4>Interaction</h4>
+      <h2 class="blind">인터렉션 콘텐츠</h2>
+      <div class="interaction__inner">
+        <section class="interaction__info">
+          <h3>Interaction1</h3>
           <ul class="interaction__list">
             <li class="interaction__item">
               <div class="interaction-card">
@@ -17,7 +15,7 @@
                     <div class="bar"></div>
                   </div>
                 </div>
-                <h5 class="interaction-card__title">Loading Bar</h5>
+                <strong class="interaction-card__title">Loading Bar</strong>
                 <div class="interaction-card__controller">
                   <div class="range">
                     <span class="interaction-card__controller-title">SPEED</span>
@@ -48,9 +46,12 @@
                     <div class="circle skew"></div>
                   </div>
                 </div>
-                <h5 class="interaction-card__title">
+                <strong class="interaction-card__title">
                   <span class="sub-title">TYPE 1</span>Loading Circle
-                </h5>
+                </strong>
+                <div class="interaction-card__sub-content">
+                  <p>테스트용</p>
+                </div>
               </div>
             </li>
             <li class="interaction__item">
@@ -62,9 +63,9 @@
                     </div>
                   </div>
                 </div>
-                <h5 class="interaction-card__title">
+                <strong class="interaction-card__title">
                   <span class="sub-title">TYPE 2</span>Loading Circle
-                </h5>
+                </strong>
               </div>
             </li>
             <li class="interaction__item">
@@ -81,41 +82,41 @@
                     <div class="dot"></div>
                   </div>
                 </div>
-                <h5 class="interaction-card__title">Loading Dot</h5>
+                <strong class="interaction-card__title">Loading Dot</strong>
               </div>
             </li>
             <li class="interaction__item">
               <div class="interaction-card">
                 <div class="interaction-card__content"></div>
-                <h5 class="interaction-card__title">깜짝등장</h5>
+                <strong class="interaction-card__title">깜짝등장</strong>
               </div>
             </li>
             <li class="interaction__item">
               <div class="interaction-card">
                 <div class="interaction-card__content"></div>
-                <h5 class="interaction-card__title">Example</h5>
+                <strong class="interaction-card__title">Example</strong>
               </div>
             </li>
           </ul>
-        </article>
-        <article class="interaction__info">
-          <h4>Interaction</h4>
+        </section>
+        <section class="interaction__info">
+          <h3>Interaction2</h3>
           <ul class="interaction__list">
             <li class="interaction__item">
               <div class="interaction-card">
                 <div class="interaction-card__content"></div>
-                <h5 class="interaction-card__title">Example</h5>
+                <strong class="interaction-card__title">Example</strong>
               </div>
             </li>
             <li class="interaction__item">
               <div class="interaction-card">
                 <div class="interaction-card__content"></div>
-                <h5 class="interaction-card__title">Example</h5>
+                <strong class="interaction-card__title">Example</strong>
               </div>
             </li>
           </ul>
-        </article>
-      </section>
+        </section>
+      </div>
     </main>
   </div>
 </template>
