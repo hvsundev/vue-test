@@ -1,9 +1,6 @@
 <template>
   <section class="clean-main-wrap">
     <div class="inner">
-      <h1 class="logo">
-        <img :src="require('@/assets/clean/logo-bi.png')" alt="로고" />
-      </h1>
       <p class="title">
         사무실 정기청소 서비스<br>
         <span style="color: #9e9e9e">상쾌한 업무의 시작을 위해</span>

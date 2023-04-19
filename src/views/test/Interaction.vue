@@ -87,14 +87,35 @@
             </li>
             <li class="interaction__item">
               <div class="interaction-card">
-                <div class="interaction-card__content"></div>
-                <strong class="interaction-card__title">깜짝등장</strong>
+                <div class="interaction-card__content">
+                  <div class="contents-place">
+                    <div class="card">
+                      <div class="card-side card-side-front">CARD</div>
+                      <div class="card-side card-side-back"></div>
+                    </div>
+                    <div class="card">
+                      <div class="card-side card-side-front">CARD</div>
+                      <div class="card-side card-side-back"></div>
+                    </div>
+                  </div>
+                </div>
+                <strong class="interaction-card__title">3D</strong>
+                <div class="interaction-card__controller">
+                  <div class="range">
+                    <span class="interaction-card__controller-title">SPEED</span>
+                    <input type="range" />
+                  </div>
+                  <div class="color-picker">
+                    <span class="interaction-card__controller-title">COLOR</span>
+                    <input type="range" />
+                  </div>
+                </div>
               </div>
             </li>
             <li class="interaction__item">
               <div class="interaction-card">
                 <div class="interaction-card__content"></div>
-                <strong class="interaction-card__title">Example</strong>
+                <strong class="interaction-card__title">깜짝등장</strong>
               </div>
             </li>
           </ul>
