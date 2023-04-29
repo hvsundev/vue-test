@@ -31,8 +31,8 @@ export default [
         component: () => import("@/views/test/StarTest.vue"),
       },
       {
-        path: "tooltip",
-        component: () => import("@/views/test/TooltipTest.vue"),
+        path: "ui",
+        component: () => import("@/views/test/UITest.vue"),
       },
       {
         path: "hamburger",

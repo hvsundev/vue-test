@@ -1,9 +1,9 @@
 <template>
   <div id="test-area">
     <div class="inner">
-      <div>
+      <div class="test-content">
         <p class="test-title">Tooltip</p>
-        <button class="tooltip-box" @click="showTooltip">
+        <button @click="showTooltip">
           <p>툴팁띄우기</p>
         </button>
         <div v-show="isShowTooltip" class="tooltip test-pos">
@@ -14,12 +14,12 @@
           </p>
         </div>
       </div>
-      <div>
+      <div class="test-content">
         <p class="test-title">Toast</p>
-        <button class="tooltip-box" @click="showToast">
+        <button @click="showToast">
           토스트 띄우기
         </button>
-        <div class="toast" v-show="isShowToast">
+        <div class="toast" :class="isShowToast && 'isShow'">
           <i>
             <img :src="require('@/assets/check-mark.png')">
           </i>
@@ -32,11 +32,11 @@
 
 <script>
 export default {
-  name: "tooltip",
+  name: "ui",
   data() {
     return {
-      isShowTooltip: true,
-      isShowToast: true,
+      isShowTooltip: false,
+      isShowToast: false,
     };
   },
   methods: {
@@ -59,16 +59,73 @@ export default {
 
 <style lang="scss" scoped>
 #test-area {
+  padding: 50px;
+
+  .test {
+    &-content {
+      margin-bottom: 20px;
+    }
+  }
+
+  button {
+    background-color: #7a72dd;
+    border-radius: 10px;
+    color: white;
+    width: 100px;
+    height: 50px;
+  }
+
+  .tooltip {
+      position: absolute;
+      padding: 15px 20px;
+      background-color: #71718a;
+      color: #fff;
+      font-size: 13px;
+      line-height: 23px;
+      border-radius: 8px;
+      top: 19px;
+      left: 240px;
+
+      &.test-pos {
+        width: 230px;
+
+        &::after {
+          position: absolute;
+          content: '';
+          width: 10px;
+          height: 10px;
+          background-color: #71718a;
+          top: 50%;
+          left: -5px;
+        }
+      }
+
+      .close {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        right: 12px;
+        top: 6px;
+        cursor: pointer;
+
+      }
+    }
+
   .toast {
     position: fixed;
     display: flex;
     align-items: center;
-    left: 10px;
-    right: 10px;
+    width: 300px;
     top: 350px;
     padding: 20px 24px;
     background-color: #2f2f2f;
     border-radius: 16px;
+    opacity: 0;
+    transition: opacity .3s;
+
+    &.isShow {
+      opacity: 1;
+    }
 
     i {
       display: inline-block;

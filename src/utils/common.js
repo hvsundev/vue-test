@@ -23,8 +23,8 @@ export default {
           isCompleted: true,
         },
         {
-          title: "Tooltip",
-          router: "/test/tooltip",
+          title: "UI",
+          router: "/test/ui",
           isCompleted: true,
         },
         {

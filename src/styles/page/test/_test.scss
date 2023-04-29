@@ -56,7 +56,7 @@ hr {
 
   .test-title {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: bold;
   }
   // == 공통 끝
@@ -141,54 +141,6 @@ hr {
 
       &.active {
         background-color: yellow;
-      }
-    }
-  }
-
-  // 툴팁 테스트
-  #tooltip-test {
-    position: relative;
-
-    .tooltip-box {
-      width: 150px;
-      height: 50px;
-      background-color: #EFD3D7;
-    }
-
-    .tooltip {
-      position: absolute;
-      padding: 15px 20px;
-      background-color: #71718a;
-      color: #fff;
-      font-size: 13px;
-      line-height: 23px;
-      border-radius: 8px;
-      top: 19px;
-      left: 240px;
-
-      &.test-pos {
-        width: 230px;
-
-        &::after {
-          position: absolute;
-          content: '';
-          width: 10px;
-          height: 10px;
-          background-color: #71718a;
-          top: 50%;
-          left: -5px;
-          @include vendorPrefix('transform', rotate(45deg));
-        }
-      }
-
-      .close {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        right: 12px;
-        top: 6px;
-        cursor: pointer;
-
       }
     }
   }
